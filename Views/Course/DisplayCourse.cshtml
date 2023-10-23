@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "DisplayCourse";
+}
+
+<h1>DisplayCourse</h1>
+
+<table>
+    <tr>
+        <td>Enter User Name</td>
+        <td>@ViewBag.Name</td>
+    </tr>
+    <tr>
+        <td>Select Gender</td>
+        <td>@ViewBag.Gender</td>
+    </tr>
+    <tr>
+        <td>Course</td>
+
+        <td>@foreach(string s in ViewBag.course)
+            {
+
+            <p>@s</p>                
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>Interest</td>
+        <td>@ViewBag.Interest</td>
+    </tr>
+    <tr>
+        <td></td>
+            <td>
+                <input type="Submit" value="Save"/>
+            </td>
+       
+    </tr>
+</table>

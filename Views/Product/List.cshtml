@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "List";
+}
+<h4>@ViewData["Message"]</h4>
+@*<table border="1">
+    <tr>
+        <td>Product Id</td>
+        <td>@ViewBag.ID</td>
+    </tr>
+    <tr>
+        <td>
+            Product Name
+        </td>
+        <td>@ViewBag.Name</td>
+    </tr>
+    <tr>
+        <td>Price</td>
+        <td>@ViewBag.Price</td>
+    </tr>
+</table>*@
+  <table class="table" border="1">
+   
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+   <tbody>
+        @foreach (Product c in ViewBag.Product)
+        {
+            <tr>
+            <td>@c.Id</td>
+            <td>@c.Name</td>
+            <td>@c.Price</td>
+            </tr>
+        }
+    </tbody>
+
+           
+    
+        
+    
+
+      
+    
+    </table>
+    
